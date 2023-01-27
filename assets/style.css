@@ -15,7 +15,11 @@ h1 {
     padding: 1rem 0;
 }
 
-h3
+h3 {
+    font-size: 0.9rem;
+    font-weight: 900;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
 html {
     font-family: 'Neuton', Georgia, 'Times New Roman', Times, serif;
