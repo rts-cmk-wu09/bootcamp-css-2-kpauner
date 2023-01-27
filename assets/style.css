@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700;900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+    background-color: blue;
+}
+
+header.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+}
+
+header.main-header a {
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+header div > ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1rem;
+    width: 10rem;
+}
+
+ul.burger li:last-child {
+    margin-left: 1rem;
+}
+
+.logo {
+    width: 420px;
+}
+
+.user-container ul li {
+    margin-left: 1rem;
+}
+
+/* NAVIGATION BANNER */
+
+nav {
+    padding: 0.6rem 0;
+    border-top:1px solid #f0f0f0;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+}
+
+nav ul li a {
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform:capitalize;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-banner {
+    display: flex;
+    justify-content: space-around;
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.banner-add {
+    margin: 2rem auto;
+    background-color: #f0f0f0;
+    height: 160px;
+    width: 70%;
+}
+
+main {
+    max-width: 960px;
+}
