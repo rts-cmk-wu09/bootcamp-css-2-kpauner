@@ -99,7 +99,13 @@ main > article {
     grid-template-columns: 1fr 2fr;
 }
 
-.category {
+main article img.article-img {
+    width: 100%;
+}
+
+.subheading {
+    font-weight: 700;
+    margin: 0 0 1rem 0;
 }
 
 .article-cover {
