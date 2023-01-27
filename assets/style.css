@@ -8,6 +8,13 @@
     margin: 0;
 }
 
+h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 1rem 0;
+}
+
 html {
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -79,9 +86,33 @@ nav ul li a {
     margin: 2rem auto;
     background-color: #f0f0f0;
     height: 160px;
-    width: 70%;
+    max-width: 960px;
 }
 
 main {
     max-width: 960px;
+    margin: 0 auto;
+}
+
+main > article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.category {
+}
+
+.article-cover {
+    position: relative;
+}
+
+.img-description {
+    position: absolute;
+    left: -20rem;
+    top:0;
+    width: 50%;
+    padding: 0 1rem 0;
+    text-align: right;
+    font-size: 0.7rem;
+    color: #746f87;
 }
