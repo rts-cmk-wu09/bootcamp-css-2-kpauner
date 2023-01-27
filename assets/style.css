@@ -140,3 +140,30 @@ main article img.article-img {
     padding: 2rem 0;
     border-bottom: 1px dotted #746f87;
 }
+
+.share-some {
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+
+.share-some li {
+    padding: 1rem;
+}
+
+.article-content {
+}
+
+.article-content p {
+    width: 60%;
+}
+
+.subscribe {
+    background-color: blue;
+    height: 400px;
+    display: block;
+}
+
+.subscribe::before {
+    clear: both;
+}
