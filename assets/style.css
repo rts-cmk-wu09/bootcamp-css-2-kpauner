@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -10,17 +10,19 @@
 
 h1 {
     font-weight: 900;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
     padding: 1rem 0;
 }
 
+h3
+
 html {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Neuton', Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
 }
 
 header {
-    background-color: blue;
 }
 
 header.main-header {
@@ -97,6 +99,7 @@ main {
 main > article {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    gap: 1rem;
 }
 
 main article img.article-img {
@@ -104,8 +107,10 @@ main article img.article-img {
 }
 
 .subheading {
-    font-weight: 700;
-    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0 0 1.6rem 0;
+    color: #746f87;
 }
 
 .article-cover {
@@ -114,11 +119,20 @@ main article img.article-img {
 
 .img-description {
     position: absolute;
-    left: -20rem;
+    left: -16rem;
     top:0;
     width: 50%;
     padding: 0 1rem 0;
     text-align: right;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     color: #746f87;
+}
+
+.cat-date, h3 {
+    display: flex;
+    justify-content: space-between;
+    height: 2rem;
+    margin: 0 0 1rem 0;
+    padding: 2rem 0;
+    border-bottom: 1px dotted #746f87;
 }
