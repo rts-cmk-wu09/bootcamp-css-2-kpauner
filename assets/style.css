@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap');
+:root {
+    --brand-accent:#dd0000;
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -8,17 +10,30 @@
     margin: 0;
 }
 
-h1 {
+h1, h2, h3 {
     font-weight: 900;
+}
+
+h1 {
     font-size: 2.8rem;
-    line-height: 2.8rem;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
+}
+
+h2, h3, .subscriber {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--brand-accent);
+}
+
+h2::first-letter {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.2rem;
 }
 
 h3 {
     font-size: 0.9rem;
-    font-weight: 900;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
@@ -117,6 +132,17 @@ main article img.article-img {
     color: #746f87;
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/-1;
+    width: 100%;
+    background-color: aqua;        
+    margin: 0 0 1rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px dotted #746f87;
+}
+
 .article-cover {
     position: relative;
 }
@@ -132,12 +158,11 @@ main article img.article-img {
     color: #746f87;
 }
 
-.cat-date, h3 {
+.cat-date {
     display: flex;
     justify-content: space-between;
-    height: 2rem;
     margin: 0 0 1rem 0;
-    padding: 2rem 0;
+    padding: 1rem 0;
     border-bottom: 1px dotted #746f87;
 }
 
@@ -147,23 +172,80 @@ main article img.article-img {
     width: 50px;
 }
 
+.share-some::after {
+    clear: both;
+}
+
 .share-some li {
     padding: 1rem;
 }
 
 .article-content {
+    position: relative;
 }
 
 .article-content p {
-    width: 60%;
+    float: left;
 }
 
 .subscribe {
-    background-color: blue;
-    height: 400px;
-    display: block;
+    background-color:beige;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px -50px 25px 20px rgb(255, 255, 255);
+    text-align: center;
 }
 
 .subscribe::before {
     clear: both;
+}
+
+.subscribe a.btn {
+    padding: 1rem;
+    display: block;
+    margin: 0 auto;
+    background-color:var(--brand-accent);
+    border-radius: 4px;
+}
+
+.recommendations {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    grid-column: 1/-1;
+}
+
+.featured {
+    float: left;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.featured article {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.latest-news {
+    float: left;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0 0;
+}
+
+.subscriber {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 900;
+    position: absolute;
+    top: 0rem;
 }
