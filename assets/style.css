@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap');
+
 :root {
     --brand-accent:#dd0000;
-    --neutral-grey: #d7d7d7;
+    --neutral-grey: #9c9fac;
     --neutral-light-grey:#f0f0f0;
+    --neutral-lightest-grey:#d7d7d7;
     --accent-grey: #34323d;
+
+    --font-sans: Arial, Helvetica, sans-serif;
 }
 
 *, *::before, *::after {
@@ -14,21 +19,23 @@
 }
 
 a {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:var(--font-sans);
     text-decoration: none;
+    color: black;
 }
 
-h1, h2, h3 {
-    font-weight: 900;
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
     padding: 1.2rem 0;
 }
 
 h2, h3, h5, small, .subscriber {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:var(--font-sans);
     color: var(--brand-accent);
 }
 
@@ -44,6 +51,15 @@ h3 {
     font-size: 0.9rem;
 }
 
+h4 {
+    font-size: 0.7rem;
+    padding: 0 0 0.6rem 0;
+}
+
+h4::first-letter {
+    text-transform: uppercase;
+}
+
 h5 {
     font-size: 0.65rem;
     font-weight: 900;
@@ -51,7 +67,7 @@ h5 {
 }
 
 html {
-    font-family: 'Neuton', Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lora', serif;
     font-size: 1.2rem;
 }
 
@@ -93,8 +109,39 @@ ul.burger li:last-child {
 }
 
 .user {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    font-family:var(--font-sans);
+    text-transform: capitalize;
+    margin: 0 0 1rem 0;
+}
+
+.author-title {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.user div {
+    display:flex;
+    flex-direction: column;
+    padding: 0 0 0 1rem;
+}
+  
+.user div time {
+    font-size: 0.7rem;
+    color: var(--neutral-grey);
+}
+
+.comment-content {
+    font-family:var(--font-sans);
+    font-size: 0.8rem;
+}
+
+.comment a {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 1rem 0 0;
+    display: block;
+    text-decoration: none;
 }
 
 /* NAVIGATION BANNER */
@@ -131,7 +178,7 @@ nav ul li a {
 
 main {
     max-width: 960px;
-    margin: 4rem auto 10rem;
+    margin: 4rem auto 0;
 }
 
 main > article {
@@ -145,7 +192,7 @@ main article img.article-img {
 }
 
 .subheading {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     margin: 0 0 1.6rem 0;
     color: #746f87;
@@ -155,8 +202,7 @@ main article img.article-img {
     display: flex;
     justify-content: space-between;
     grid-column: 1/-1;
-    width: 100%;
-    background-color: aqua;        
+    width: 100%;      
     margin: 0 0 1rem 0;
     padding: 1rem 0;
     border-bottom: 1px dotted #746f87;
@@ -186,9 +232,12 @@ main article img.article-img {
 }
 
 .share-some {
-    float: left;
+    display: flex;
     height: 50px;
-    width: 50px;
+}
+
+.share-some ul li {
+    background-color: #dd0000;
 }
 
 .share-some::after {
@@ -201,14 +250,14 @@ main article img.article-img {
 
 .article-content {
     position: relative;
+    display: grid;
 }
 
 .article-content p {
-    float: left;
+    grid-column: 1;
 }
 
 .subscribe {
-    background-color:beige;
     height: 300px;
     width: 100%;
     display: flex;
@@ -219,21 +268,58 @@ main article img.article-img {
     text-align: center;
 }
 
+.subscribe > p:first-child {
+    font-family:var(--font-sans);
+    padding: 1rem 1rem 2rem 1rem;
+    font-weight: 700;
+}
+
+.login {
+    font-size: 0.8rem;
+    font-weight:normal;
+    font-family:var(--font-sans);
+    color: var(--neutral-grey);
+    padding: 1.4rem 0 0;
+}
+
+.login a {
+    text-decoration: underline;
+}
+
 .subscribe::before {
     clear: both;
 }
 
 .subscribe a.btn {
-    padding: 1rem;
+    padding: 0.6rem;
     display: block;
     margin: 0 auto;
     background-color:var(--brand-accent);
     border-radius: 4px;
+    width: 230px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+
 }
 
 .recommendations {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
+}
+
+.section-header div > button {
+    background-image: url(left-arw.png);
+    width: 22px;
+    height: 22px;
+    border: none;
+}
+
+.section-header div > button:last-of-type {
+    background-image: url(right-arw.png);
+    width: 22px;
+    height: 22px;
 }
 
 .recommendations::after {
@@ -241,20 +327,31 @@ main article img.article-img {
 }
 
 .carousel {
-    display: flex;
-    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 0 0 2rem 0;
+}
+
+.carousel img {
+    width: 100%;
 }
 
 .featured {
-    float: left;
     width: 75%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
+.featured::after {
+    clear: both;
+}
+
 .featured article {
     position: relative;
     padding: 1rem 0;
+    color: var(--neutral-grey);
+    font-size: 0.8rem;
 }
 
 .latest-news {
@@ -263,6 +360,15 @@ main article img.article-img {
     display: flex;
     flex-direction: column;
     padding: 0 1rem 0 0;
+}
+
+.latest-news article time {
+    font-size: 0.7rem;
+    color: var(--neutral-grey);
+}
+
+.latest-news h4 {
+    border-bottom: 1px solid var(--neutral-light-grey);
 }
 
 .subscriber {
@@ -284,8 +390,7 @@ main article img.article-img {
 }
 
 .comments h5 {
-    width: 100%;
-    background-color: aqua;        
+    width: 100%;     
     margin: 0 0 1rem 0;
     padding: 1rem 0;
     border-bottom: 1px dotted #746f87;
@@ -299,9 +404,10 @@ main article img.article-img {
 footer {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    background-color: var(--neutral-grey);
+    grid-template-columns: repeat(4, 220px);
+    gap: 20px;
+    justify-content: center;
+    background-color: var(--neutral-lightest-grey);
     padding: 2rem;
     margin: 6rem 0 0;
 }
@@ -345,6 +451,7 @@ footer ul li::first-letter {
 
 .wdgt input {
     border-radius: 4px;
+    width: 70%;
 }
 
 footer > small {
