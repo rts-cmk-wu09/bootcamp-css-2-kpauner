@@ -58,7 +58,9 @@
             </header>
 
             <aside class="author">
-                <h3>udland</h3>
+                <div class="section-header">
+                    <h3>udland</h3>
+                </div>
                 <img src="assets/author.png" alt="author-jakob-stein">
                 <span class="author-title">jakob stein</span>
                 <ul class="contact-details">
@@ -90,9 +92,9 @@
                     <li><a href="#">email</a></li>
                 </ul>
 
-                <div class="subscribe" style="display: block; height: 300px; background-color:brown;">
+                <div class="subscribe">
                     <p>vores abonnenter kalder os kritisk, seriøst og troværdig. se om du er enig...</p>
-                    <a href="#">Klik her</a>
+                    <a href="#" class="btn">Klik her</a>
                     <p class="login">Er du abonnent? <a href="#">log ind her</a></p>
                 </div>               
             </section>
@@ -103,8 +105,10 @@
     <section class="recommendations">
         <div class="section-header">
             <h2>fik du læst?</h2>
-            <button><</button>
-            <button>></button>
+            <div>
+                <button></button>
+                <button></button>
+            </div>
         </div>
         <div class="carousel">
             <article>
@@ -125,6 +129,9 @@
             </article>
         </div>
         <div class="latest-news">
+            <div class="section-header">
+                <h3>Seneste nyt</h3>
+            </div>
             <article>
                 <time datetime="2008-02-14 20:00">16:36</time>
                 <a href="#"><h4>Slut med møndbetaling i københavnske p-automater</h4></a>
@@ -167,29 +174,26 @@
             </article>
             <article>
                 <strong class="subscriber">abonnement</strong>
-                <a href="#"><h4>Peter Madsen anker kun længden af sin straf</h4></a>
-                <p>ankesagen mod Peter Madsen kommer kun til at handle om, hvilken straf han skal have</p>
-            </article>
-            <article>
-                <strong class="subscriber">abonnement</strong>
                 <img src="assets/article-cover_01.png" alt="">
                 <a href="#"><h4>440.000 syrere er vendt tiltage, selv om krigen fortsætter. Vi har fulgt en af dem</h4></a>
             </article>
         </div>
     </section>
 
-    <section class="comments">
+    <section class="comments clearfix">
         <div class="recommend">
             <h5>anbefalinger</h5>
-            <a href="#">anbefal artikel</a>
+            <a href="#">Anbefal artikel</a>
         </div>
         <div class="comments-container">
             <h5>kommentarer</h5>
             <div class="comment">
                 <div class="user">
                     <img src="assets/author.png" alt="user-author">
-                    <span class="author-title">jakob stein</span>
-                    <time datetime="2008-02-14 20:00">07.maj.2018-16:36</time>
+                    <div>
+                        <span class="author-title">jakob stein</span>
+                        <time datetime="2008-02-14 20:00">07.maj.2018-16:36</time>
+                    </div>
                 </div>
                 <p class="comment-content">
                     Proin tincidunt aliquet neque, non convallis felis pretium eget. Aliquam iaculis leo in tellus dignissim, eget congue ipsum luctus. 
@@ -219,7 +223,7 @@
             </ul>
         </div>
         <div class="wdgt">
-            <img src="#" alt="avis billede">
+            <img src="assets/newspaper.png" alt="avis billede">
         </div>
         <div class="wdgt">
             <h5>information hver morden</h5>
@@ -234,9 +238,9 @@
                 <li><a href="#">hjælp til information.dk</a></li>
             </ul>
         </div>
-        <div class="wd">
+        <div class="wdgt">
             <h5>om information</h5>
-            <ul class="buy">
+            <ul class="about">
                 <li><a href="#">redaktion</a></li>
                 <li><a href="#">iBureauet</a></li>
                 <li><a href="#">besøg butikken</a></li>
